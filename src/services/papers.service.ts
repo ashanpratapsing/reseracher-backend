@@ -3,7 +3,10 @@ import type { Paper } from "../types/paper";
 
 // GET ALL
 export async function getAllPapers() {
-  return await supabase.from("papers").select("*").order("created_at", { ascending: false });
+  return await supabase
+    .from("papers")
+    .select("*")
+    .order("created_at", { ascending: false });
 }
 
 // CREATE

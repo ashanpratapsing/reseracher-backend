@@ -7,19 +7,24 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.ts",
     "build": "tsc",
-    "start": "node dist/app.js"
+    "start": "node dist/app.js",
+    "verify": "ts-node verify-setup.ts",
+    "add-data": "ts-node test-data.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@supabase/supabase-js": "^2.38.5",
+    "better-sqlite3": "^12.6.2",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
-    "supabase-js": "^0.0.1-security",
     "uuid": "^13.0.0"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.3.2",
     "nodemo": "^1.0.0",

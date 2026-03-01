@@ -1,7 +1,8 @@
 import express from "express";
 import cors from "cors";
-import paperRoutes from "./routes/papers.routes";
+import paperRoutes from "./routes/papers.route";
 import dotenv from "dotenv";
+
 dotenv.config();
 
 const app = express();

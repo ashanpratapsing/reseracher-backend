@@ -17,7 +17,7 @@ export async function addPaper(req: Request, res: Response) {
 
 // DELETE
 export async function removePaper(req: Request, res: Response) {
-  const { id } = req.params;
+  const id = req.params.id as string;
   const { error } = await PaperService.deletePaper(id);
   if (error) return res.status(500).json({ error });
   res.json({ message: "Paper deleted" });
@@ -25,7 +25,7 @@ export async function removePaper(req: Request, res: Response) {
 
 // UPDATE
 export async function editPaper(req: Request, res: Response) {
-  const { id } = req.params;
+  const id = req.params.id as string;
   const { data, error } = await PaperService.updatePaper(id, req.body);
   if (error) return res.status(500).json({ error });
   res.json(data);
